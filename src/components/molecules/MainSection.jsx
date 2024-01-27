@@ -33,9 +33,9 @@ const MainSection = () => {
 
     return (
         <main className="flex-1">
-            <section className="w-full pt-12 md:pt-24 lg:pt-32 border-y border-gray-700">
-                <div className="px-4 md:px-6 space-y-10 xl:space-y-16">
-                    <div className="grid max-w-[1300px] mx-auto gap-4 px-4 sm:px-6 md:px-10 md:grid-cols-2 md:gap-16">
+            <section className="w-full pt-8 md:pt-16 lg:pt-24 border-y border-gray-700">
+                <div className="px-4 md:px-6 space-y-6 xl:space-y-10">
+                    <div className="grid max-w-[1300px] mx-auto gap-4 px-4 sm:px-6 md:px-10 md:grid-cols-2 md:gap-12">
                         <div>
                             <h1 className="lg:leading-tighter text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl xl:text-[3.4rem] 2xl:text-[3.75rem] text-neon">
                                 Escucha tu música favorita
@@ -46,7 +46,7 @@ const MainSection = () => {
                         </div>
                         <div className="flex flex-col items-center space-y-4">
                             {/* Carrusel */}
-                            <div className="relative overflow-hidden" style={{ width: '500px', height: '500px' }}>
+                            <div className="relative overflow-hidden" style={{ width: '400px', height: '400px' }}>
                                 <div className="absolute top-0 left-0 w-full h-full flex justify-between items-center">
                                     <button onClick={() => handleSlide(currentIndex - 1)} className="text-white">&#10094;</button>
                                     <button onClick={() => handleSlide(currentIndex + 1)} className="text-white">&#10095;</button>
@@ -56,7 +56,7 @@ const MainSection = () => {
                                         src={images[currentIndex]}
                                         alt={`Imagen ${currentIndex + 1}`}
                                         className={`object-cover rounded-xl transition-opacity ${fade ? 'opacity-0' : 'opacity-100'}`}
-                                        style={{ width: '500px', height: '500px' }}
+                                        style={{ width: '400px', height: '400px' }}
                                     />
                                 </div>
                             </div>
