@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 
-const RegisterButton = () => {
+function RegisterButton() {
     return (
         <NavLink
             to="/register"
@@ -9,6 +9,6 @@ const RegisterButton = () => {
             Register
         </NavLink>
     );
-};
+}
 
 export default RegisterButton;

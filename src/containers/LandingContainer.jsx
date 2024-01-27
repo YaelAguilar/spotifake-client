@@ -3,7 +3,7 @@ import LandingHeader from '../components/molecules/LandingHeader';
 import MainSection from '../components/molecules/MainSection';
 import FeatureSection from '../components/atoms/FeatureSection';
 
-const LandingContainer = () => {
+function LandingContainer() {
     return (
         <LandingTemplate 
             header={<LandingHeader />} 
@@ -11,6 +11,6 @@ const LandingContainer = () => {
             featureSection={<FeatureSection />} 
         />
     );
-};
+}
 
 export default LandingContainer;

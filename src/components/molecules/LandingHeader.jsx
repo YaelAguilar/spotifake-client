@@ -3,7 +3,7 @@ import LoginButton from '../atoms/LoginButtonOnHeader';
 import RegisterButton from '../atoms/RegisterButtonOnHeader';
 import SpotifakeButton from '../atoms/SpotifakeButton';
 
-const Header = () => {
+function Header() {
     return (
         <header className="px-4 lg:px-6 h-14 flex items-center justify-between">
             <MusicIcon className="h-6 w-6 text-neon" />
@@ -14,6 +14,6 @@ const Header = () => {
             </nav>
         </header>
     );
-};
+}
 
 export default Header;

@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 
-const LoginButton = () => {
+function LoginButton() {
     return (
         <NavLink
             to="/login"
@@ -9,6 +9,6 @@ const LoginButton = () => {
             Login
         </NavLink>
     );
-};
+}
 
 export default LoginButton;

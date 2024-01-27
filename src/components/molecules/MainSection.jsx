@@ -4,7 +4,7 @@ import smithereensImage from '../../assets/smithereens.jpg';
 import ameriImage from '../../assets/duki_antes_de_ameri.jpg';
 import loverImage from '../../assets/taylor_swift_lover.jpg';
 
-const MainSection = () => {
+function MainSection() {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [fade, setFade] = useState(false);
     const images = [billieEilishImage, smithereensImage, loverImage, ameriImage];
@@ -66,6 +66,6 @@ const MainSection = () => {
             </section>
         </main>
     );
-};
+}
 
 export default MainSection;

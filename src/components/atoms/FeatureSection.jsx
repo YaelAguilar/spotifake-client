@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-const FeatureSection = () => {
+function FeatureSection() {
     return (
         <section className="w-full py-8 md:py-16 lg:py-24 flex justify-center items-center">
             <div className="container space-y-8 px-4 md:px-6 flex flex-col justify-center items-center">
@@ -31,7 +31,7 @@ const FeatureSection = () => {
             </div>
         </section>
     );
-};
+}
 
 const FeatureItem = ({ title, description }) => {
     return (

@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 
-const BrandNavLink = () => {
+function BrandNavLink() {
     return (
         <NavLink
             to="/"
@@ -9,6 +9,6 @@ const BrandNavLink = () => {
             Spotifake
         </NavLink>
     );
-};
+}
 
 export default BrandNavLink;

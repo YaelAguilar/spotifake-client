@@ -3,7 +3,7 @@ import LoginHeader from '../components/molecules/LoginHeader';
 import Text from '../components/atoms/YourAccount';
 import Form from '../components/atoms/LoginForm';
 
-const LandingContainer = () => {
+function LandingContainer() {
     return (
         <LoginTemplate 
             header={<LoginHeader />} 
@@ -11,6 +11,6 @@ const LandingContainer = () => {
             form={<Form />} 
         />
     );
-};
+}
 
 export default LandingContainer;
