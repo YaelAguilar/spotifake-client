@@ -2,14 +2,14 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 function LoginForm() {
-    const [username, setUsername] = useState('');
+    const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
 
     const handleSubmit = async (event) => {
         event.preventDefault();
         const endpoint = 'TU_BACKEND_URI';
-        const data = { username, password };
+        const data = { email, password };
 
         try {
             const response = await fetch(endpoint, {
@@ -37,12 +37,12 @@ function LoginForm() {
     return (
         <form onSubmit={handleSubmit} className="mx-auto grid items-start gap-8 pt-8 sm:max-w-md sm:grid-cols-1 md:gap-12 lg:max-w-md lg:grid-cols-1">
             <div className="grid gap-1">
-                <h3 className="text-lg font-bold text-neon">Username</h3>
+                <h3 className="text-lg font-bold text-neon">Email</h3>
                 <input
                     className="text-sm text-gray-400 bg-gray-800 rounded-lg px-4 py-2 w-full" 
-                    placeholder="Enter your username"
-                    value={username}
-                    onChange={(e) => setUsername(e.target.value)}
+                    placeholder="Enter your email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                 />
             </div>
             <div className="grid gap-1">

@@ -1,7 +1,7 @@
-import MusicIcon from '../atoms/MusicIcon';
-import LoginButton from '../atoms/LoginButtonOnHeader';
-import RegisterButton from '../atoms/RegisterButtonOnHeader';
-import SpotifakeButton from '../atoms/SpotifakeButton';
+import MusicIcon from '../../atoms/MusicIcon';
+import LoginButton from '../../atoms/LoginButtonOnHeader';
+import RegisterButton from '../../atoms/RegisterButtonOnHeader';
+import SpotifakeButton from '../../atoms/SpotifakeButton';
 
 function Header() {
     return (

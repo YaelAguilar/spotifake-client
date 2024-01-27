@@ -1,7 +1,7 @@
 import LoginTemplate from '../components/templates/LoginTemplate';
-import LoginHeader from '../components/molecules/LoginHeader';
-import Text from '../components/atoms/YourAccount';
-import Form from '../components/atoms/LoginForm';
+import LoginHeader from '../components/molecules/login/LoginHeader';
+import Text from '../components/atoms/login/YourAccount';
+import Form from '../components/atoms/login/LoginForm';
 
 function LandingContainer() {
     return (

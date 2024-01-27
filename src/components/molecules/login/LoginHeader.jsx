@@ -1,6 +1,6 @@
-import MusicIcon from '../atoms/MusicIcon';
-import SpotifakeButton from '../atoms/SpotifakeButton';
-import RegisterButton from '../atoms/RegisterButtonOnHeader';
+import MusicIcon from '../../atoms/MusicIcon';
+import SpotifakeButton from '../../atoms/SpotifakeButton';
+import RegisterButton from '../../atoms/RegisterButtonOnHeader';
 
 function Header() {
     return (
