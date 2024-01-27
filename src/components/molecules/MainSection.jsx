@@ -21,7 +21,7 @@ const MainSection = () => {
                 setCurrentIndex(newIndex);
             }
             setFade(false);
-        }, 200); // Duración de la transición de opacidad
+        }, 200);
     }, [images.length]);
 
     useEffect(() => {
