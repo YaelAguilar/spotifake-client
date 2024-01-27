@@ -1,6 +1,6 @@
 import MusicIcon from '../atoms/MusicIcon';
-import LoginButton from '../atoms/LoginButton';
-import RegisterButton from '../atoms/RegisterButton';
+import LoginButton from '../atoms/LoginButtonOnHeader';
+import RegisterButton from '../atoms/RegisterButtonOnHeader';
 import SpotifakeButton from '../atoms/SpotifakeButton';
 
 const Header = () => {
