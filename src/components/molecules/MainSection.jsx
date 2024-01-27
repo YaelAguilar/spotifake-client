@@ -27,7 +27,7 @@ const MainSection = () => {
     useEffect(() => {
         const interval = setInterval(() => {
             handleSlide(currentIndex + 1);
-        }, 3000);
+        }, 2000);
         return () => clearInterval(interval);
     }, [currentIndex, images.length, handleSlide]);
 

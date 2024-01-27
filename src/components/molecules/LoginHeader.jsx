@@ -1,12 +1,18 @@
 import MusicIcon from '../atoms/MusicIcon';
+import SpotifakeButton from '../atoms/SpotifakeButton';
 import RegisterButton from '../atoms/RegisterButton';
 
 const Header = () => {
     return (
-        <header className="px-4 lg:px-6 h-14 flex items-center">
-            <MusicIcon className="h-6 w-6 text-neon" />
-            <nav className="ml-auto flex gap-4 sm:gap-6">
-                <RegisterButton></RegisterButton>
+        <header className="px-4 lg:px-6 h-14 flex items-center justify-between">
+            <div className="flex items-center space-x-4">
+                <MusicIcon className="h-6 w-6 text-neon" />
+            </div>
+
+            <SpotifakeButton />
+            
+            <nav className="flex items-center space-x-4">
+                <RegisterButton />
             </nav>
         </header>
     );
