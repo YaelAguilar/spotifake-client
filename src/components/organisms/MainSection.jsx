@@ -1,5 +1,4 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
-
 import billieEilishImage from '../../assets/billie_eilish_happier_than_ever.jpg';
 import smithereensImage from '../../assets/smithereens.jpg';
 import ameriImage from '../../assets/duki_antes_de_ameri.jpg';
@@ -22,13 +21,13 @@ const MainSection = () => {
                 setCurrentIndex(newIndex);
             }
             setFade(false);
-        }, 500); // Duración de la transición de opacidad
+        }, 200); // Duración de la transición de opacidad
     }, [images.length]);
 
     useEffect(() => {
         const interval = setInterval(() => {
             handleSlide(currentIndex + 1);
-        }, 4000);
+        }, 3000);
         return () => clearInterval(interval);
     }, [currentIndex, images.length, handleSlide]);
 
