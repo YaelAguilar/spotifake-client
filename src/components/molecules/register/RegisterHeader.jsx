@@ -1,6 +1,6 @@
 import MusicIcon from '../../atoms/MusicIcon';
 import SpotifakeButton from '../../atoms/SpotifakeButton';
-import LoginButton from '../../atoms/RegisterButtonOnHeader';
+import RegisterButton from '../../atoms/LoginButtonOnHeader';
 
 function Header() {
     return (
@@ -12,7 +12,7 @@ function Header() {
             <SpotifakeButton />
             
             <nav className="flex items-center space-x-4">
-                <LoginButton />
+                <RegisterButton />
             </nav>
         </header>
     );

@@ -1,11 +1,11 @@
-import LoginTemplate from '../components/templates/LoginTemplate';
+import Login from '../components/templates/FormTemplate';
 import LoginHeader from '../components/molecules/login/LoginHeader';
 import Text from '../components/atoms/login/YourAccount';
 import Form from '../components/atoms/login/LoginForm';
 
-function LandingContainer() {
+function LoginContainer() {
     return (
-        <LoginTemplate 
+        <Login
             header={<LoginHeader />} 
             text={<Text />} 
             form={<Form />} 
@@ -13,4 +13,4 @@ function LandingContainer() {
     );
 }
 
-export default LandingContainer;
+export default LoginContainer;
