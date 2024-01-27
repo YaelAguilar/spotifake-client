@@ -45,7 +45,7 @@ function MainSection() {
                             </p>
                         </div>
                         {/* Carrusel */}
-                        <div className="flex flex-col items-center space-y-4">
+                        <div className="flex flex-col items-center space-y-4 pt-2 pb-8"> {/* Padding superior reducido */}
                             <div className="relative overflow-hidden" style={{ width: '400px', height: '400px' }}>
                                 <div className="absolute top-0 left-0 w-full h-full flex justify-between items-center">
                                     <button onClick={() => handleSlide(currentIndex - 1)} className="text-white">&#10094;</button>
