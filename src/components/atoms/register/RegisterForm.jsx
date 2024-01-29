@@ -10,14 +10,15 @@ function RegisterForm() {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
+    
         if (password !== confirmPassword) {
             alert("Passwords don't match");
             return;
         }
         
-        const endpoint = 'TU_BACKEND_URI'; // Reemplaza con tu URI del backend para registro
+        const endpoint = 'http://localhost:3000/api/users/register';
         const data = { username, email, password };
-
+    
         try {
             const response = await fetch(endpoint, {
                 method: 'POST',
@@ -26,18 +27,30 @@ function RegisterForm() {
                 },
                 body: JSON.stringify(data),
             });
-
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
+    
+            const responseClone = response.clone();
+    
+            try {
+                const result = await response.json();
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}, ${result.message}`);
+                }
+    
+                console.log('Success:', result);
+                navigate('/home');
+            } catch (jsonError) {
+                if (!response.ok) {
+                    const errorText = await responseClone.text();
+                    throw new Error(`HTTP error! status: ${response.status}, ${errorText}`);
+                } else {
+                    //console.log('Response is not JSON:', jsonError);
+                    console.log('User registered successfully, but the response was not in JSON format.');
+                    navigate('/home');
+                }
             }
-
-            const result = await response.json();
-            console.log('Success:', result);
-
-            navigate('/home');
-
         } catch (error) {
             console.error('Error:', error);
+            alert(error.message);
         }
     };
 
@@ -50,6 +63,7 @@ function RegisterForm() {
                     placeholder="Enter your username"
                     value={username}
                     onChange={(e) => setUsername(e.target.value)}
+                    required
                 />
             </div>
             <div className="grid gap-1">
@@ -60,6 +74,7 @@ function RegisterForm() {
                     type="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
+                    required
                 />
             </div>
             <div className="grid gap-1">
@@ -70,6 +85,7 @@ function RegisterForm() {
                     type="password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
+                    required
                 />
             </div>
             <div className="grid gap-1">
@@ -80,6 +96,7 @@ function RegisterForm() {
                     type="password"
                     value={confirmPassword}
                     onChange={(e) => setConfirmPassword(e.target.value)}
+                    required
                 />
             </div>
             <button className="col-span-full bg-purple-600 active:bg-purple-700 text-white rounded-lg px-4 py-2 mt-6" type="submit">
