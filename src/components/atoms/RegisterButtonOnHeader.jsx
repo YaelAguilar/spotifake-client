@@ -4,7 +4,7 @@ function RegisterButton() {
     return (
         <NavLink
             to="/register"
-            className="text-sm font-medium hover:underline underline-offset-4 text-neon"
+            className="text-sm font-bold hover:underline underline-offset-4 text-neon"
         >
             Register
         </NavLink>

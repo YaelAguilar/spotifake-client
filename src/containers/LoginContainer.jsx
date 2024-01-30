@@ -1,12 +1,12 @@
 import Login from '../components/templates/FormTemplate';
-import LoginHeader from '../components/molecules/login/LoginHeader';
-import Text from '../components/atoms/login/YourAccount';
-import Form from '../components/atoms/login/LoginForm';
+import Header from '../components/molecules/Header';
+import Text from '../components/atoms/YourAccount';
+import Form from '../components/atoms/LoginForm';
 
 function LoginContainer() {
     return (
         <Login
-            header={<LoginHeader />} 
+            header={<Header />} 
             text={<Text />} 
             form={<Form />} 
         />

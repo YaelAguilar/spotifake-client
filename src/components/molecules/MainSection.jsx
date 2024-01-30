@@ -1,8 +1,8 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
-import billieEilishImage from '../../../assets/billie_eilish_happier_than_ever.jpg';
-import smithereensImage from '../../../assets/smithereens.jpg';
-import ameriImage from '../../../assets/duki_antes_de_ameri.jpg';
-import loverImage from '../../../assets/taylor_swift_lover.jpg';
+import billieEilishImage from '../../assets/billie_eilish_happier_than_ever.jpg';
+import smithereensImage from '../../assets/smithereens.jpg';
+import ameriImage from '../../assets/duki_antes_de_ameri.jpg';
+import loverImage from '../../assets/taylor_swift_lover.jpg';
 
 function MainSection() {
     const [currentIndex, setCurrentIndex] = useState(0);

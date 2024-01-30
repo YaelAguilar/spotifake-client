@@ -1,7 +1,7 @@
 import Register from '../components/templates/FormTemplate';
-import Header from '../components/molecules/register/RegisterHeader';
-import Text from '../components/atoms/register/CreateAccount';
-import Form from '../components/atoms/register/RegisterForm';
+import Header from '../components/molecules/Header';
+import Text from '../components/atoms/CreateAccount';
+import Form from '../components/atoms/RegisterForm';
 
 function RegisterContainer() {
     return (

@@ -1,7 +1,8 @@
-const HomePage = () => {
+import PrincipalContainer from "../containers/PrincipalContainer";
+function HomePage() {
     return (
-        <h1>Home</h1>
-    );
-};
-
-export default HomePage;
+        <PrincipalContainer/>
+    )
+  }
+  
+  export default HomePage;
