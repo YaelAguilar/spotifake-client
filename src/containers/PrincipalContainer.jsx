@@ -1,9 +1,9 @@
-import Principal from "../components/organisms/viewPrincipal";
-//import Chat from "../components/organisms/Chat";
+import MusicPlayer from "../components/organisms/MusicPlayer";
+
 function principalContainer(){
     return(
         <>
-        <Principal></Principal>
+        <MusicPlayer></MusicPlayer>
         </>
 
     );

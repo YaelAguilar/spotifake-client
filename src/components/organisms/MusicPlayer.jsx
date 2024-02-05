@@ -3,7 +3,7 @@ import io from 'socket.io-client';
 
 const socket = io('http://localhost:5000');
 
-function MusicPlayer() {
+const MusicPlayer = () => {
     const [roomName, setRoomName] = useState('');
     const [currentSong, setCurrentSong] = useState('');
     const [isSubscribed, setIsSubscribed] = useState(false);
@@ -19,11 +19,17 @@ function MusicPlayer() {
     };
 
     useEffect(() => {
-        socket.on('trackChanged', (track) => {
-            setCurrentSong(`public/${track}`);
+        socket.on('trackChanged', async (track) => {
+            const newTrack = `public/${track}`;
+            setCurrentSong(newTrack);
             if (audioPlayer.current) {
-                audioPlayer.current.load();
-                audioPlayer.current.play();
+                try {
+                    await audioPlayer.current.pause();
+                    audioPlayer.current.load();
+                    await audioPlayer.current.play();
+                } catch(error) {
+                    console.error('Error playing track:', error);
+                }
             }
         });
 
