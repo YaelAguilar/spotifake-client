@@ -79,8 +79,8 @@ const MusicPlayer = () => {
     };
 
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white p-4 pt-2">
-            <h1 className="text-6xl font-bold mb-8">Sockets Music Player</h1>
+        <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white p-4">
+        <h1 className="text-6xl font-bold mb-8">Sockets Music Player</h1>
             {!isSubscribed ? (
                 <form onSubmit={handleRoomSubmit} className="mb-4">
                     <input
@@ -99,9 +99,11 @@ const MusicPlayer = () => {
             ) : (
                 <>
                     <div className="text-2xl mb-4">{currentSong.split('public/')[1]}</div>
-                    <audio controls src={currentSong} ref={audioPlayer} className="mt-4 pb-4">
+                <div className="controls flex justify-center items-center space-x-2">
+                    <audio controls src={currentSong} ref={audioPlayer} className="w-full h-10">
                         Your browser does not support the audio element.
                     </audio>
+                </div>
                     <div className="grid grid-cols-2 gap-4 mb-4">
                         {Object.entries(albumCovers).map(([track, cover], index) => (
                             <div key={index} className="bg-gray-800 p-4 rounded-lg shadow-lg flex items-center">

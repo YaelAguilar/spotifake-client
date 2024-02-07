@@ -12,10 +12,12 @@
   "dependencies": {
     "@nextui-org/react": "^2.2.9",
     "@types/react-router-dom": "^5.3.3",
+    "chart.js": "^4.4.1",
     "cors": "^2.8.5",
     "framer-motion": "^11.0.3",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
+    "react-chartjs-2": "^5.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.21.3",
     "react-slick": "^0.30.0",
