@@ -6,7 +6,7 @@ function MusicGenresChart() {
   useEffect(() => {
     let ws;
     const connectWebSocket = () => {
-      ws = new WebSocket('ws://localhost:3006');
+      ws = new WebSocket('ws://localhost:3005');
 
       ws.onopen = () => {
         console.log('WebSocket connected');
@@ -52,7 +52,7 @@ function MusicGenresChart() {
               Real-time Data
             </div>
             <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl text-white">
-              Most Popular Music Genres
+              Géneros Musicales Mas Escuchados
             </h1>
           </div>
           <div className="grid gap-4 min-h-[200px] grid-cols-2">

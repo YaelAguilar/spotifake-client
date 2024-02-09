@@ -1,6 +1,6 @@
 import MusicPlayer from "../components/organisms/MusicPlayer";
 
-function principalContainer(){
+function musicRoomContainer(){
     return(
         <>
         <MusicPlayer></MusicPlayer>
@@ -9,4 +9,4 @@ function principalContainer(){
     );
 }
 
-export default principalContainer;
+export default musicRoomContainer;

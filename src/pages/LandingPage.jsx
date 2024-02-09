@@ -1,9 +1,9 @@
 import LandingContainer from "../containers/LandingContainer";
 
-const LandingPage = () => {
+function LandingPage(){
     return (
         <LandingContainer/>
     );
-};
+}
 
 export default LandingPage;

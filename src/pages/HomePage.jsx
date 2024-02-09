@@ -1,8 +1,10 @@
-import PrincipalContainer from "../containers/PrincipalContainer";
-function HomePage() {
-    return (
-        <PrincipalContainer/>
+import HomeContainer from '../containers/HomeContainer'
+
+function HomePage(){
+
+    return(
+        <HomeContainer/>
     )
-  }
-  
-  export default HomePage;
+}
+
+export default HomePage;

@@ -1,9 +1,9 @@
 import LoginContainer from "../containers/LoginContainer";
 
-const LandingPage = () => {
+function LoginPage () {
     return (
         <LoginContainer/>
     );
-};
+}
 
-export default LandingPage;
+export default LoginPage;
