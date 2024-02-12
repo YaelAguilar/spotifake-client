@@ -65,7 +65,7 @@ function Home() {
                         </p>
                     </div>
                     <NavLink to="/musicroom">
-                        <button className="text-white bg-blue-600 hover:bg-blue-800 font-bold py-2 px-4 rounded transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110">
+                        <button className="text-white bg-purple-600 hover:bg-purple-700 font-bold py-2 px-4 rounded transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110">
                             Escuchar Ahora
                         </button>
                     </NavLink>

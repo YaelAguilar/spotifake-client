@@ -33,7 +33,7 @@ function Noti() {
                 <p>Artista: {release.artist}</p>
                 <p>Canción: {release.single}</p>
             </div>
-            <button onClick={() => setRelease(null)} className="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            <button onClick={() => setRelease(null)} className="mt-4 bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded">
                 Cerrar Alerta
             </button>
         </div>
