@@ -27,7 +27,7 @@ function Noti() {
     if (!release) return null;
 
     return (
-        <div className="fixed top-5 right-5 max-w-sm w-full bg-gray-800 bg-opacity-75 text-white p-4 rounded-lg shadow-lg z-50">
+        <div className="fixed bottom-5 right-5 max-w-sm w-full bg-gray-800 bg-opacity-75 text-white p-4 rounded-lg shadow-lg z-50">
             <h2 className="text-lg font-bold">¡Alerta de Nuevo Lanzamiento!</h2>
             <div className="mt-2">
                 <p>Artista: {release.artist}</p>
