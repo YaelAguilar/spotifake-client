@@ -17,7 +17,7 @@ function Noti() {
             console.log('Received data from server:', data);
             setRelease(data);
           }
-          setTimeout(fetchLatestRelease, 5000); // Siempre reinicia el long polling.
+          setTimeout(fetchLatestRelease, 5000);
         })
         .catch(error => {
           console.error('Error fetching next release:', error);
