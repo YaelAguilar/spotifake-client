@@ -3,56 +3,28 @@ import { NavLink } from 'react-router-dom';
 
 function Home() {
     const [lanzamientos, setLanzamientos] = useState([]);
-    const [indiceActual, setIndiceActual] = useState(0);
-    const [haObtenidoDatos, setHaObtenidoDatos] = useState(false);
 
     useEffect(() => {
-        const obtenerLanzamientos = async () => {
-            if (haObtenidoDatos) return;
-
+        const fetchReleases = async () => {
             try {
                 const respuesta = await fetch('http://localhost:3000/api/upcoming-releases');
                 const datos = await respuesta.json();
-                if (datos.length > 0) {
-                    const proximoIndice = indiceActual % datos.length;
-                    const proximoLanzamiento = {
-                        ...datos[proximoIndice],
-                        imageUrl: `http://localhost:3000/${datos[proximoIndice].imageUrl}`
-                    };
-                    setLanzamientos([proximoLanzamiento]);
-                    setHaObtenidoDatos(true);
-                }
+                const lanzamientosActualizados = datos.map(dato => ({
+                    ...dato,
+                    imageUrl: `http://localhost:3000/${dato.imageUrl}`
+                }));
+                setLanzamientos(lanzamientosActualizados);
             } catch (error) {
                 console.error('Error al obtener datos:', error);
             }
         };
 
-        obtenerLanzamientos();
-    },);
+        fetchReleases();
 
-    useEffect(() => {
-        if (!haObtenidoDatos) return;
-
-        const idIntervalo = setInterval(async () => {
-            try {
-                const respuesta = await fetch('http://localhost:3000/api/upcoming-releases');
-                const datos = await respuesta.json();
-                if (datos.length > 0) {
-                    const proximoIndice = (indiceActual + 1) % datos.length;
-                    const proximoLanzamiento = {
-                        ...datos[proximoIndice],
-                        imageUrl: `http://localhost:3000/${datos[proximoIndice].imageUrl}`
-                    };
-                    setLanzamientos(prev => prev.length < 3 ? [...prev, proximoLanzamiento] : [proximoLanzamiento, ...prev.slice(0, 2)]);
-                    setIndiceActual(proximoIndice);
-                }
-            } catch (error) {
-                console.error('Error al obtener datos:', error);
-            }
-        }, 5000);
+        const idIntervalo = setInterval(fetchReleases, 3000);
 
         return () => clearInterval(idIntervalo);
-    }, [indiceActual, haObtenidoDatos]);
+    }, []);
 
     return (
         <>
